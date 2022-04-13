@@ -1,5 +1,6 @@
-import Card from "./Card";
-import { popularProducts } from "../Data";
+import Card from './Card';
+import { popularProducts } from '../Data';
+import '../styles/CardContainer.css';
 
 const CardContainer = () => {
   return (
