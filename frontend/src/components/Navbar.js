@@ -11,12 +11,10 @@ const Navbar = () => {
       <div className="navbar-wrapper">
         <div className="left">
           <div className="language">EN</div>
-
           <div className="search-container">
             <div className="input">
               <input placeholder="Search" />
             </div>
-
             {/* inline styling */}
             <SearchIcon style={{ color: 'gray', fontSize: 16 }} />
           </div>
@@ -27,8 +25,9 @@ const Navbar = () => {
         <div className="right">
           <Link to="/">Home</Link>
           <Link to="/product">Products</Link>
-          <div className="menu-item">Register</div>
-          <div className="menu-item">Sign In</div>
+          <Link to="/register">Register</Link>
+          <Link to="/signin">Sign In</Link>
+          <Link to="/cart">Cart</Link>
           <div className="menu-item">
             <Badge badgeContent={4} color="primary">
               <ShoppingCartIcon />

@@ -1,12 +1,10 @@
 import React from 'react';
 import CardContainer from '../components/CardContainer';
-import Navbar from '../components/Navbar';
 import '../styles/ProductList.css';
 
 const ProductList = () => {
   return (
     <div>
-      {/* <Navbar /> */}
       <h1 className="title"> Bouquets</h1>
       <div className="filter-container">
         <div className="filter">

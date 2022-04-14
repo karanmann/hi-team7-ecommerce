@@ -1,7 +1,10 @@
 import Navbar from './components/Navbar';
 import Product from './pages/Product';
 import ProductList from './pages/ProductList';
+import Register from './pages/Register'
 import { Routes, Route } from 'react-router-dom';
+import SignIn from './pages/SignIn';
+import Cart from './pages/Cart';
 
 const App = () => {
   return (
@@ -10,6 +13,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<ProductList />} />
         <Route exact path="/product" element={<Product />} />
+        <Route exact path="/register" element={<Register />} />
+        <Route exact path="/signin" element={<SignIn />} />
+        <Route exact path="/cart" element={<Cart />} />
       </Routes>
     </div>
   );
