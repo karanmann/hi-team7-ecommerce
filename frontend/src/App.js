@@ -17,6 +17,7 @@ const App = () => {
         <Route exact path="/signin" element={<SignIn />} />
         <Route exact path="/cart" element={<Cart />} />
       </Routes>
+
     </div>
   );
 };
