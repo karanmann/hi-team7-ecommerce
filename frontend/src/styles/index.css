@@ -21,3 +21,7 @@ code {
 .product-list {
   margin: 2rem;
 }
+
+.search_input {
+  border: 1px solid grey;
+}

@@ -1,40 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CardContainer from '../components/CardContainer';
 import '../styles/ProductList.css';
+import { popularProducts } from '../Data';
 
 const ProductList = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const filteredData = popularProducts.filter((val) => {
+    if (searchTerm === '') {
+      return val;
+    } else if (
+      val.id.includes(searchTerm) ||
+      val.description.toLowerCase().includes(searchTerm.toLowerCase())
+    ) {
+      return val;
+    } else {
+      return console.log('There was a problem');
+    }
+  });
+
   return (
     <div>
       <h1 className="title"> Bouquets</h1>
-      <div className="filter-container">
-        <div className="filter">
-          <span className="filter-text">Filter Products:</span>
-          <select className="select">
-            <option disabled selected className="option" value="color">
-              Color
-            </option>
-            <option value="white">White</option>
-            <option value="black">Black</option>
-            <option value="red">Red</option>
-            <option value="blue">Blue</option>
-            <option value="yellow">Yellow</option>
-            <option value="green">Green</option>
-          </select>
-        </div>
-        <div className="filter">
-          <span className="filter-text">Sort Products:</span>
-          <select className="select">
-            <option selected value="newest">
-              Newest
-            </option>
-            <option value="priceup">Price (asc)</option>
-            <option value="pricedown">Price (desc)</option>
-          </select>
-        </div>
-      </div>
-      <CardContainer />
+      Search
+      <input
+        className="search_input"
+        type="text"
+        name="Search"
+        aria-label="Search Field to enter text"
+        onChange={(event) => setSearchTerm(event.target.value)}
+      />
+      <CardContainer filteredData={filteredData} />
     </div>
   );
 };
 
 export default ProductList;
+
+// description
