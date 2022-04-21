@@ -1,0 +1,55 @@
+.reg-container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://images.unsplash.com/photo-1573814976265-1f923c76d40c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTF8fGZsb3dlcnMlMjBib3VxdWV0fGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=600&q=60")
+      center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reg-wrapper {
+  width: 40%;
+  padding: 20px;
+  background-color: white;
+  
+}
+ .title{
+  font-size: 24px;
+  font-weight: 400;
+  
+ }
+.reg-form{
+  display: flex;
+  flex-wrap: wrap;
+}
+.reg-input{
+  flex: 1;
+  min-width: 40%;
+  margin: 20px 10px 0px 0px;
+  padding: 10px;
+  border: 1px solid #c1c1c1;
+  
+}
+.reg-
+.reg-agreement{
+  font-size: 12px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reg-button{
+  width: 30%;
+  border: none;
+  padding: 15px 20px;
+  background-color: #cb3486;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
