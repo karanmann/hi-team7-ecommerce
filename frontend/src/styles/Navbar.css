@@ -57,3 +57,38 @@ input {
   cursor: pointer;
   margin-left: 25px;
 }
+
+.search-icon {
+  color: gray;
+  font-size: 2rem
+}
+
+.animated-links {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  margin: 0 1rem;
+  padding: .3rem 1rem;
+  width: auto;
+  color: black;
+}
+
+.animated-links:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: black;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.animated-links:hover:after { 
+  width: 100%;
+  left: 0
+}

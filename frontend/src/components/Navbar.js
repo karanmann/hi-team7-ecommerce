@@ -16,18 +16,18 @@ const Navbar = () => {
               <input placeholder="Search" />
             </div>
             {/* inline styling */}
-            <SearchIcon style={{ color: 'gray', fontSize: 16 }} />
+            <SearchIcon className="search-icon" />
           </div>
         </div>
         <div className="center">
           <div className="logo">FLORgeous.</div>
         </div>
         <div className="right">
-          <Link to="/">Home</Link>
-          <Link to="/product">Products</Link>
-          <Link to="/register">Register</Link>
-          <Link to="/signin">Sign In</Link>
-          <Link to="/cart">Cart</Link>
+          <Link className="animated-links" to="/">Home</Link>
+          <Link className="animated-links" to="/product">Products</Link>
+          <Link className="animated-links" to="/register">Register</Link>
+          <Link className="animated-links" to="/signin">SignIn</Link>
+          <Link className="animated-links" to="/cart">Cart</Link>
           <div className="menu-item">
             <Badge badgeContent={4} color="primary">
               <ShoppingCartIcon />
