@@ -29,7 +29,7 @@ const ProductList = () => {
           type="text"
           name="Search"
           aria-label="Search Field to enter text"
-          onChange={(event) => setSearchTerm(event.target.value)}SS
+          onChange={(event) => setSearchTerm(event.target.value)}
         />
       </div>
       <CardContainer filteredData={filteredData} />
