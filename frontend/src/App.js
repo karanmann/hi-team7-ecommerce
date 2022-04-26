@@ -1,10 +1,11 @@
-import Navbar from './components/Navbar';
-import Product from './pages/Product';
-import ProductList from './pages/ProductList';
-import Register from './pages/Register'
-import { Routes, Route } from 'react-router-dom';
-import SignIn from './pages/SignIn';
-import Cart from './pages/Cart';
+import Navbar from "./components/Navbar";
+import Product from "./pages/Product";
+import ProductList from "./pages/ProductList";
+import Register from "./pages/Register";
+import { Routes, Route } from "react-router-dom";
+import SignIn from "./pages/SignIn";
+import Cart from "./pages/Cart";
+import React from "react";
 
 const App = () => {
   return (

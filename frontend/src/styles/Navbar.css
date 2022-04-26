@@ -1,8 +1,12 @@
 /* NAVBAR */
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap');
 
 .container {
-  height: 60px;
+  height: 80px;
   background-color: rgb(196, 196, 82);
+  width: 100vw;
+  padding-top: 10px;
+
 }
 
 .navbar-wrapper {
@@ -41,8 +45,10 @@ input {
 }
 
 .logo {
-  font-size: 20px;
+  font-size: 3rem;
   font-weight: bold;
+  font-family: 'Cabin Sketch', cursive;
+  letter-spacing: 5px;
 }
 
 .right {
