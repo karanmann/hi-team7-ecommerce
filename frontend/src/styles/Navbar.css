@@ -1,72 +1,51 @@
 /* NAVBAR */
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap');
 
-.container {
-  height: 80px;
-  background-color: rgb(196, 196, 82);
-  width: 100vw;
-  padding-top: 10px;
-
-}
-
-.navbar-wrapper {
-  padding: 10px 20px;
+.list {
+  list-style-type: none;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  position: relative;
 }
 
-.left {
-  flex: 1;
-  display: flex;
-  align-items: center;
-}
-
-.language {
-  font-size: 14px;
+.items {
+  margin-right: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #f1f1f1;
   cursor: pointer;
 }
 
-.search-container {
-  border: 0.5px solid lightgray;
-  display: flex;
-  align-items: center;
-  margin-left: 25px;
+.btn {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 7px;
   padding: 5px;
+  color: #000;
+  font-size: 18px;
 }
 
-input {
-  border: none;
+.navbar {
+  width: 100vw;
+  background-color: rgb(112, 220, 112);
+  padding: 0 2rem;
 }
 
-.center {
-  flex: 1;
+.navbar,
+.navbar-links-container {
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-evenly;
 }
 
-.logo {
-  font-size: 3rem;
-  font-weight: bold;
+.navbar-title {
   font-family: 'Cabin Sketch', cursive;
   letter-spacing: 5px;
-}
-
-.right {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.menu-item {
-  font-size: 14px;
-  cursor: pointer;
-  margin-left: 25px;
-}
-
-.search-icon {
-  color: gray;
-  font-size: 2rem
+  font-size: 3rem;
 }
 
 .animated-links {
@@ -97,4 +76,26 @@ input {
 .animated-links:hover:after { 
   width: 100%;
   left: 0
+}
+
+
+@media screen and (max-width: 500px){
+  .list {
+      flex-direction: column;
+      height: auto;
+  }
+  .items:nth-child(1){
+      border-top: 1px solid rgba(255, 255, 255, 0.555);
+      margin-top: 50px;
+  }
+  .items {
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.555);
+      text-align: center;
+      margin-right: 0px;
+      padding: 20px 0;
+  }
+  .btn {
+      display: block;
+  }
 }
