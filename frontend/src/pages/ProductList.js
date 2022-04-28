@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
-import CardContainer from '../components/CardContainer';
-import '../styles/ProductList.css';
-import { popularProducts } from '../Data';
+import React, { useState } from "react";
+import CardContainer from "../components/CardContainer";
+import "../styles/ProductList.css";
+import popularProducts from "../Data.js";
 
 const ProductList = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-
+  const [searchTerm, setSearchTerm] = useState("");
   const filteredData = popularProducts.filter((val) => {
-    if (searchTerm === '') {
+    if (searchTerm === "") {
       return val;
     } else if (
       val.id.includes(searchTerm) ||
@@ -15,7 +14,7 @@ const ProductList = () => {
     ) {
       return val;
     } else {
-      return console.log('There was a problem');
+      return console.log("There was a problem");
     }
   });
 
@@ -30,6 +29,7 @@ const ProductList = () => {
         aria-label="Search Field to enter text"
         onChange={(event) => setSearchTerm(event.target.value)}
       />
+      {console.log(popularProducts)}
       <CardContainer filteredData={filteredData} />
     </div>
   );

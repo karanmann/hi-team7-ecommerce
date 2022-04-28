@@ -40,7 +40,7 @@ export const categories = [
   },
 ];
 
-export const popularProducts = [
+const popularProducts = [
   {
     id: 1,
     description: 'white flowers',
@@ -81,7 +81,6 @@ export const popularProducts = [
     description: 'red flowers',
     img: 'https://images.unsplash.com/photo-1571990306521-cf96e6858f2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
   },
-  //cakes
   {
     id: 9,
     description: 'green flowers',
@@ -102,7 +101,6 @@ export const popularProducts = [
     description: 'pink flowers',
     img: 'https://images.unsplash.com/photo-1582558930581-f4aece1a3ba7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1888&q=80',
   },
-  //wedding bouquets
   {
     id: 13,
     description: 'white flowers',
@@ -134,3 +132,5 @@ export const popularProducts = [
     img: 'https://images.unsplash.com/photo-1525096122400-e43fa92b933f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTF8fHdlZGRpbmclMjBib3F1ZXR8ZW58MHwxfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60',
   },
 ];
+
+export default popularProducts;
