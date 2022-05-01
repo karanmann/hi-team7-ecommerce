@@ -4,14 +4,13 @@ import "../styles/ProductList.css";
 import { popularProducts } from "../Data";
 
 const ProductList = () => {
-  console.log("popular products", popularProducts)
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredData = popularProducts.filter((val) => {
     if (searchTerm === "") {
       return val;
     } else if (
-      val.description.toLowerCase().includes(searchTerm.toLowerCase())
+      val.keywords.toLowerCase().includes(searchTerm.toLowerCase())
     ) {
       return val;
     } else {
