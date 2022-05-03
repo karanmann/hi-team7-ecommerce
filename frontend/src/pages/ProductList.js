@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import CardContainer from "../components/CardContainer";
 import "../styles/ProductList.css";
+
 import { popularProducts } from "../Data";
 
 const ProductList = () => {
   const [searchTerm, setSearchTerm] = useState("");
+
 
   const filteredData = popularProducts.filter((val) => {
     if (searchTerm === "") {

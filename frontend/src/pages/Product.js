@@ -1,7 +1,7 @@
 import React from "react";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-import { popularProducts } from "../Data";
+import { popularProducts } from "../Data.js";
 import { useParams } from "react-router-dom";
 import "../styles/Product.css";
 
