@@ -4,9 +4,7 @@ import App from "./App";
 import "./styles/index.css";
 import { BrowserRouter } from "react-router-dom";
 
-
 //REACT 17 Way
-
 // ReactDOM.render(
 //   <React.StrictMode>
 //

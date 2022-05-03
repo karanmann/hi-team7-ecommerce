@@ -2,69 +2,56 @@
 /* NAVBAR */
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap');
 
-.container {
-  height: 80px;
-}
-
-.header {
-  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-  position: fixed;
-  width: 100%;
-  z-index: 3;
-  top: 0;
-  background-color: rgb(196, 196, 82);
-  width: 100vw;
-  padding-top: 10px;
-
-}
-
-.header ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-}
-
-.header li a {
-  display: block;
-  padding: 20px 20px;
-  text-decoration: none;
-}
-
-.header li:hover,
-.header .menu-btn:hover {
-}
-
-.menu {
+.list {
+  list-style-type: none;
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-.header .logo {
-  display: block;
-  float: left;
-  font-size: 2em;
-  padding: 10px 20px;
-  text-decoration: none;
-}
-
-/* menu */
-
-.header .menu {
-  clear: both;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
-}
-
-/* menu icon */
-
-.header .menu-icon {
+.items {
+  margin-right: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #f1f1f1;
   cursor: pointer;
   display: inline-block;
   float: right;
   padding: 28px 20px;
   position: relative;
+}
+
+
+.btn {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  padding: 5px;
+  color: #000;
+  font-size: 18px;
+}
+
+.navbar {
+  width: 100vw;
+  background-color: rgb(112, 220, 112);
+  padding: 0 2rem;
+}
+
+.navbar,
+.navbar-links-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navbar-title {
+  font-family: 'Cabin Sketch', cursive;
+  letter-spacing: 5px;
+  font-size: 3rem;
 }
 
 .header .menu-icon .navicon {
@@ -137,6 +124,7 @@
   height: 2rem;
   width: 2rem;
   transform: translate(-70%, 60%);
+
 }
 
 .animated-links {
@@ -162,6 +150,34 @@
   background: black;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
+}
+
+
+.animated-links:hover:after { 
+  width: 100%;
+  left: 0
+}
+
+
+@media screen and (max-width: 500px){
+  .list {
+      flex-direction: column;
+      height: auto;
+  }
+  .items:nth-child(1){
+      border-top: 1px solid rgba(255, 255, 255, 0.555);
+      margin-top: 50px;
+  }
+  .items {
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.555);
+      text-align: center;
+      margin-right: 0px;
+      padding: 20px 0;
+  }
+  .btn {
+      display: block;
+  }
 }
 
 .animated-links:hover:after {
