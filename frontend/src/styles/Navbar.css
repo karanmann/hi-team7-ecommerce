@@ -1,3 +1,11 @@
+
+/* NAVBAR */
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap');
+
+.container {
+  height: 80px;
+}
+
 .header {
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
   position: fixed;
@@ -5,6 +13,9 @@
   z-index: 3;
   top: 0;
   background-color: rgb(196, 196, 82);
+  width: 100vw;
+  padding-top: 10px;
+
 }
 
 .header ul {
@@ -80,8 +91,19 @@
   top: 5px;
 }
 
-.header .menu-icon .navicon:after {
+
+.logo {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Cabin Sketch', cursive;
+  letter-spacing: 5px;
+}
+
+.header, 
+.menu-icon, 
+.navicon:after {
   top: -5px;
+
 }
 
 /* menu btn */

@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import CardContainer from "../components/CardContainer";
 import "../styles/ProductList.css";
-import popularProducts from "../Data.js";
+
+import { popularProducts } from "../Data";
 
 const ProductList = () => {
   const [searchTerm, setSearchTerm] = useState("");
+
+
   const filteredData = popularProducts.filter((val) => {
     if (searchTerm === "") {
       return val;
     } else if (
-      val.id.includes(searchTerm) ||
-      val.description.toLowerCase().includes(searchTerm.toLowerCase())
+      val.keywords.toLowerCase().includes(searchTerm.toLowerCase())
     ) {
       return val;
     } else {
@@ -21,15 +23,16 @@ const ProductList = () => {
   return (
     <div>
       <h1 className="title"> Bouquets</h1>
-      Search
-      <input
-        className="search_input"
-        type="text"
-        name="Search"
-        aria-label="Search Field to enter text"
-        onChange={(event) => setSearchTerm(event.target.value)}
-      />
-      {console.log(popularProducts)}
+      <div className="search-product-list">
+        <p className="search-product-list-text">Search</p>
+        <input
+          className="search-product-list-text-input"
+          type="text"
+          name="Search"
+          aria-label="Search Field to enter text"
+          onChange={(event) => setSearchTerm(event.target.value)}
+        />
+      </div>
       <CardContainer filteredData={filteredData} />
     </div>
   );

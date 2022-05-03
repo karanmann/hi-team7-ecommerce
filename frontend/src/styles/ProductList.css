@@ -1,3 +1,21 @@
+.search-product-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100vw;
+  justify-content: center;
+}
+
+.search-product-list-text {
+  margin-right: 1rem;
+  font-weight: 700;
+}
+
+.search-product-list-text-input {
+  border: 1px solid grey;
+  width: 200pxs
+}
+
 .title {
   margin: 20px;
 }
