@@ -1,3 +1,4 @@
+
 /* NAVBAR */
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap');
 
@@ -16,7 +17,12 @@
   text-transform: uppercase;
   color: #f1f1f1;
   cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
 }
+
 
 .btn {
   display: none;
@@ -48,6 +54,79 @@
   font-size: 3rem;
 }
 
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+
+.logo {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Cabin Sketch', cursive;
+  letter-spacing: 5px;
+}
+
+.header, 
+.menu-icon, 
+.navicon:after {
+  top: -5px;
+
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 320px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+.shopping-cart {
+  height: 2rem;
+  width: 2rem;
+  transform: translate(-70%, 60%);
+
+}
+
 .animated-links {
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -55,14 +134,14 @@
   display: inline-block;
   position: relative;
   margin: 0 1rem;
-  padding: .3rem 1rem;
+  padding: 0.3rem 0.5rem;
   width: auto;
   color: black;
 }
 
-.animated-links:after {    
+.animated-links:after {
   background: none repeat scroll 0 0 transparent;
-  bottom: 0;
+  bottom: 1;
   content: "";
   display: block;
   height: 2px;
@@ -72,6 +151,7 @@
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
+
 
 .animated-links:hover:after { 
   width: 100%;
@@ -98,4 +178,38 @@
   .btn {
       display: block;
   }
+}
+
+.animated-links:hover:after {
+  width: 24%;
+  left: 38%;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 75em) {
+  .header li {
+    float: left;
+  }
+  
+  .header li a {
+    padding: 20px 30px;
+  }
+
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+
+  .header .menu-icon {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+  }
+
 }
